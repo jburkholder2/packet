@@ -1,0 +1,3 @@
+#!ipxe
+
+chain -ar https://boot.netboot.xyz
