@@ -1,3 +1,6 @@
 #!ipxe
 
-chain -ar https://boot.netboot.xyz
+set conn_type https
+chain --autofree https://boot.netboot.xyz/menu.ipxe || echo HTTPS failed... attempting HTTP...
+set conn_type http
+chain --autofree http://boot.netboot.xyz/menu.ipxe || echo HTTP failed, localbooting...
