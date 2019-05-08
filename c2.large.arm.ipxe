@@ -1,4 +1,5 @@
 #!ipxe
+echo version=${version}
 :again
 echo Hello world
 prompt
