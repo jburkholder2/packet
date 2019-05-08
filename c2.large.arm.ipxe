@@ -1,5 +1,10 @@
 #!ipxe
 echo version=${version}
+set latest_version 1.04
+iseq ${version} ${latest_version} && goto version_104 ||
+echo Attempting to chain to version ${latest_version}...
+chain --autofree https://raw.githubusercontent.com/jburkholder2/packet/master/netboot.xyz-packet-arm64.efi
+:version_104
 :again
 echo Hello world
 prompt
