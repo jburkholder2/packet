@@ -1,2 +1,2 @@
 #!ipxe
-boot https://raw.githubusercontent.com/jburkholder2/packet/master/Image earlycon=pl011,0x12600000 console=ttyAMA0,115200 initramfs_command=/bin/sh
+boot https://raw.githubusercontent.com/jburkholder2/packet/master/Image console=ttyAMA0,115200 initramfs_command=/bin/sh
